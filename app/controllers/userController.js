@@ -12,7 +12,7 @@ exports.register_user = function(req, res) {
         } else {
             var new_user = new User(req.body);
             new_user.save();
-            res.json('Success');
+            res.json('success');
         }
     });
 };
@@ -23,7 +23,7 @@ exports.login_user = function(req, res) {
 
         if(found_user) {
             if(found_user.password == req.body.password){
-                res.json(found_user.id);
+                res.json('success');
             } else {
             
             res.json('Invalid Password');
