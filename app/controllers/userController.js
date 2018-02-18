@@ -26,12 +26,11 @@ exports.login_user = function(req, res) {
             bcrypt.compare(password, user.password, function (err, result) {
        			 if (result === true) {
        			 	res.json('success');
+       			 } else {
+       			 	 res.json('Invalid Password');
        			 }
        		)};
-            } else {
             
-            res.json('Invalid Password');
-            }
         } else {
             
             res.json('Invalid Email');
