@@ -13,12 +13,11 @@ exports.list_all_events_by_user = function(req, res) {
 
 exports.create_a_event = function(req, res) {
   var new_event = new Event(req.body);
-  res.json(req.headers);/*
   new_event.save(function(err, event) {
     if (err)
       res.send(err);
     res.json(event);
-  }); */
+  });
 };
 
 exports.read_a_event = function(req, res) {
