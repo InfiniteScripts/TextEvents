@@ -1,6 +1,5 @@
 'use strict';
 var User = require('../models/userModel');
-var bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 
 exports.register_user = function(req, res) {
@@ -23,14 +22,12 @@ exports.login_user = function(req, res) {
         if (err) return handleError(err);
 
         if(found_user) {
-            bcrypt.compare(password, user.password, function (err, result) {
-       			 if (result === true) {
-       			 	res.json('success');
-       			 } else {
-       			 	 res.json('Invalid Password');
-       			 }
-       		)};
+            if(found_user.password == req.body.password){
+                res.json('success');
+            } else {
             
+            res.json('Invalid Password');
+            }
         } else {
             
             res.json('Invalid Email');
