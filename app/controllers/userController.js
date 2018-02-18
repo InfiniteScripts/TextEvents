@@ -22,8 +22,8 @@ exports.login_user = function(req, res) {
         if (err) return handleError(err);
 
         if(found_user) {
-            if(found_user.password == req.body.password){
-                res.json('success');
+            bcrypt.compare(password, user.password, function (err, result) {
+       			 if (result === true) {
             } else {
             
             res.json('Invalid Password');
