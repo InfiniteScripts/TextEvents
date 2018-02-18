@@ -1,5 +1,6 @@
 'use strict';
 var User = require('../models/userModel');
+var bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 
 exports.register_user = function(req, res) {
