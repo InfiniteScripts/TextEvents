@@ -8,6 +8,10 @@ var EventSchema = new Schema({
     type: String,
     required: 'Enter the name of the Event'
   },
+  profilePic:{
+    type: String,
+    default: 'assets/img/profile/pokerchip.png'
+  }
   created_date: {
     type: Date,
     default: Date.now
