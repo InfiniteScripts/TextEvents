@@ -11,7 +11,7 @@ var EventSchema = new Schema({
   profilePic:{
     type: String,
     default: 'assets/img/profile/pokerchip.png'
-  }
+  },
   created_date: {
     type: Date,
     default: Date.now
