@@ -42,6 +42,7 @@ exports.delete_a_event = function(req, res) {
   }, function(err, event) {
     if (err)
       res.send(err);
-    res.json({ message: 'Event ID ' + JSON.encode(req.params) +' successfully deleted' });
+   // res.json({ message: 'Event ID ' + JSON.encode(req.params) +' successfully deleted' });
+   res.json(req.params);
   });
 };
