@@ -31,7 +31,7 @@ var EventSchema = new Schema({
   start_text_time: {
     type: String,
   },
-  start_text_am_pm{
+  start_text_am_pm: {
     type: String,
   },
   contacts:{
