@@ -33,7 +33,7 @@ var EventSchema = new Schema({
   },
   start_text_am_pm{
     type: String,
-  }
+  },
   contacts:{
     type: Array,
 
