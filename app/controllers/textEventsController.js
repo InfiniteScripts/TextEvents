@@ -21,7 +21,7 @@ exports.create_a_event = function(req, res) {
 };
 
 exports.read_a_event = function(req, res) {
-  Event.findById(req.params.TaskId, function(err, event) {
+  Event.findById(req.params.taskId, function(err, event) {
     if (err)
       res.send(err);
     res.json(event);
@@ -29,7 +29,7 @@ exports.read_a_event = function(req, res) {
 };
 
 exports.update_a_event = function(req, res) {
-  Event.findOneAndUpdate({_id: req.params.TaskId}, req.body, {new: true}, function(err, event) {
+  Event.findOneAndUpdate({_id: req.params.taskId}, req.body, {new: true}, function(err, event) {
     if (err)
       res.send(err);
     res.json(event);
@@ -38,7 +38,7 @@ exports.update_a_event = function(req, res) {
 
 exports.delete_a_event = function(req, res) {
   Event.remove({
-    _id: req.params.TaskId
+    _id: req.params.taskId
   }, function(err, event) {
     if (err)
       res.send(err);
