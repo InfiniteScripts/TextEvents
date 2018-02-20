@@ -17,16 +17,13 @@ var EventSchema = new Schema({
     default: Date.now
   },
   user: {
-    type: String,
-    required: 'No user'
+    type: String
   },
   desc: {
     type: String,
-    required: 'No Description'
   },
   day: {
     type: String,
-    required: 'Day of the Week Required'
   },
   start_text_time: {
     type: String,
