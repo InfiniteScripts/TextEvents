@@ -28,9 +28,12 @@ var EventSchema = new Schema({
     type: String,
     required: 'Day of the Week Required'
   },
-  start_texting_time: {
+  start_text_time: {
     type: String,
   },
+  start_text_am_pm{
+    type: String,
+  }
   contacts:{
     type: Array,
 
