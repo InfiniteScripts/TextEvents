@@ -13,26 +13,25 @@ var EventSchema = new Schema({
     default: 'assets/img/profile/pokerchip.png'
   },
   created_date: {
-    type: Date,
-    default: Date.now
+    type: Date   
   },
   user: {
     type: String
   },
   desc: {
-    type: String,
+    type: String
   },
   day: {
-    type: String,
+    type: String
   },
   start_text_time: {
-    type: String,
+    type: String
   },
   start_text_am_pm: {
-    type: String,
+    type: String
   },
   contacts:{
-    type: Array,
+    type: Array
 
   }
 
