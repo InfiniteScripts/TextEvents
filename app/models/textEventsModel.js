@@ -18,7 +18,7 @@ var EventSchema = new Schema({
   },
   user: {
     type: String,
-    required: 'No user ID'
+    required: 'No user'
   },
   desc: {
     type: String,
