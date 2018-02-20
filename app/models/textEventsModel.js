@@ -31,7 +31,7 @@ var EventSchema = new Schema({
     type: String
   },
   contacts:{
-    type: String
+    type: Array
 
   }
 
