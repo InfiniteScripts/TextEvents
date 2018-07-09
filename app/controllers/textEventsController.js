@@ -11,6 +11,13 @@ exports.list_all_events_by_user = function(req, res) {
   });
 };
 
+exports.list_all_events_for_user = function(req, res) {
+  Event.find({user: req.params.user}, function(err, event) {
+    if (err)
+      res.send(err);
+    res.json(event);
+  });
+};
 exports.create_a_event = function(req, res) {
   var new_event = new Event(req.body);
   new_event.save(function(err, event) {
