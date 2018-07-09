@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
   Event = mongoose.model('Events');
 
 exports.list_all_events_by_user = function(req, res) {
-  Event.find({}, function(err, event) {
+  Event.find({user: req.params.user}, function(err, event) {
     if (err)
       res.send(err);
     res.json(event);
