@@ -7,7 +7,7 @@ module.exports = function(app) {
     	.get(event.list_all_events_by_user)
     	.post(event.create_a_event);
 
-    app.route('/user?user=:user')
+    app.route('/user/:user')
       .get(event.list_all_events_for_user);
 
 	  app.route('/events/:taskId')
